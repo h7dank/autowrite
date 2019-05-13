@@ -1,0 +1,89 @@
+/**
+ * 大家好，我是丁爽
+ * 一枚前端程序猿~
+ *
+ * 好像光这么介绍太简单了点，，
+ *
+ * 那我们给这个页面加点东西吧。
+ * 从哪开始呢？先给所有的标签加一个动画吧
+ */
+ * {
+  transition: all 1s;
+  -webkit-transition: all 1s;
+}
+
+/**
+ * 现在看不出来效果，不过等会你就可以看到是什么样子了
+ * 接下来，让我们调整下网页的颜色，白底黑字看起来好苍白 
+ */
+
+html {
+  background: rgb(63, 82, 99);
+}
+
+pre, a {
+  color: white;
+}
+
+/**
+ * 这样看起来好多了，对吧~
+ * 不过光调整颜色也不太够，我们把代码的容器也调整下吧
+ */
+
+pre:not(:empty) {
+  overflow: auto;
+  background: rgb(48, 48, 48);
+  border: 1px solid #ccc;
+  max-height: 44.6%;
+  width: 49%;
+  font-size: 14px;
+  font-family: monospace;
+  padding: 10px 10px 20px;
+  box-shadow: -4px 4px 2px 0 rgba(0,0,0,0.3);
+  white-space: pre-wrap;
+  outline: 0;
+}
+
+
+#style-text {
+  transform: translateX(95%);
+  -webkit-transform: translateX(95%);
+  position: absolute;
+}
+
+/**
+ * 不过所有的字体都是白色，看起来也很单调，对不对？
+ * 让我们把字体颜色染一下吧~
+ */
+
+.comment       { color: #857F6B; font-style: italic; }
+.selector      { color: #E69F0F; }
+.selector .key { color: #64D5EA; }
+.key           { color: #64D5EA; }
+.value         { color: #BE84F2; }
+.value.px      { color: #F92772; }
+
+/**
+ * 这下看起来好看多了
+ * 接下来，加点3D效果吧
+ */
+
+body {
+  perspective: 1000px;
+  -webkit-perspective: 1000px;
+}
+
+#style-text {
+  transform: translateX(98.5%) rotateY(-10deg);
+  -webkit-transform: translateX(98.5%) rotateY(-10deg);
+  transform-origin: right;
+  -webkit-transform-origin: right;
+  max-height: 94.5%;
+}
+
+pre:not(#style-text) {
+  transform: rotateY(10deg);
+  transform-origin: left;
+  -webkit-transform: rotateY(10deg);
+  -webkit-transform-origin: left;
+}
